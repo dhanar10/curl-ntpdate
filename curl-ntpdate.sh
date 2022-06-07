@@ -6,3 +6,4 @@
 UTC_NOW=$(curl -I -s http://1.1.1.1 | grep "Date:" | cut -d " " -f 2-)
 UTC_NOW_ISO_8601=$(date -d "$UTC_NOW" -D "%a, %d %b %Y %T %Z" +'%Y-%m-%d %H:%M:%S')
 date -u -s "$UTC_NOW_ISO_8601" > /dev/null
+date
